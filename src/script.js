@@ -1,4 +1,3 @@
-// Require the necessary discord.js classes
 const { Client, Events, Collection, GatewayIntentBits, ActivityType } = require('discord.js');
 const { token } = require('./config.json');
 const path = require('node:path');
