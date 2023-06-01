@@ -4,14 +4,14 @@ process.on('unhandledRejection', (err) => console.error(err));
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('create-welcome')
-    .setDescription('Assign a welcome channel, reactions refreshed.'),
+    .setName('create-terms')
+    .setDescription('Creates a ToS channel, reactions assigned.'),
 
   async execute(interaction) {
 
-    const welcomeChannel = await interaction.guild.channels.create({
+    const termsChannel = await interaction.guild.channels.create({
       type: ChannelType.GuildText,
-      name: '🍻│𝗪elcome',
+      name: '📌│𝗧erms-𝗢f-𝗦ervice',
     });
 
     const embed = new EmbedBuilder()
@@ -28,7 +28,7 @@ module.exports = {
           .setStyle(ButtonStyle.Success),
       );
 
-    await welcomeChannel.send({ embeds: [embed], components: [row] })
+    await termsChannel.send({ embeds: [embed], components: [row] })
   }
 };
 
