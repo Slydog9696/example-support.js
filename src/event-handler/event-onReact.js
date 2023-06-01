@@ -14,7 +14,6 @@ module.exports = {
       if (interaction.customId === 'verified-stego-baby') {
 
         const giveRole = async () => {
-
           const embed = new EmbedBuilder()
             .setDescription(`Discord Role: <@&${verifiedRole}>\nHas been added, successfully.`)
             .setFooter({ text: 'Tip: Contact support if there are issues.' })
@@ -26,7 +25,6 @@ module.exports = {
         }
 
         const removeRole = async () => {
-
           const embed = new EmbedBuilder()
             .setDescription(`Discord Role: <@&${verifiedRole}>\nHas been removed, successfully.`)
             .setFooter({ text: 'Tip: Contact support if there are issues.' })
@@ -41,7 +39,6 @@ module.exports = {
         interaction.member.roles.cache.has(verifiedRole)
           ? removeRole() : giveRole()
       }
-
     });
   },
 };
