@@ -4,7 +4,7 @@ process.on("unhandledRejection", (err) => console.error(err));
 
 module.exports = {
   name: Events.ClientReady,
-  once: true,
+
   execute(client) {
     client.on(Events.InteractionCreate, async interaction => {
 
