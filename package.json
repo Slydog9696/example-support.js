@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.11.0",
+    "firebase": "^9.22.1",
+    "firebase-admin": "^11.9.0",
     "nodemon": "^2.0.22"
   }
 }
